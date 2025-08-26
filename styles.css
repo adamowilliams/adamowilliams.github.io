@@ -13,7 +13,7 @@ body {
 
 /* Header Navigation */
 .header {
-    background: #20b2aa;
+    background: #ffffff;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -28,18 +28,6 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.logo:hover {
-    opacity: 0.8;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
@@ -47,7 +35,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: #545454b0;
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s ease;
@@ -55,7 +43,7 @@ body {
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .social-links {
