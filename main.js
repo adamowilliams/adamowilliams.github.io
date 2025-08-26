@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeBasicAnimations();
+    initializeLightbox();
 });
 
 // Simple smooth scrolling navigation
@@ -49,4 +50,36 @@ function initializeBasicAnimations() {
     projects.forEach(project => {
         observer.observe(project);
     });
+}
+
+function initializeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+}
+
+function openLightbox(imageSrc, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+    
+    lightboxImage.src = imageSrc;
+    lightboxCaption.textContent = caption;
+    lightbox.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
