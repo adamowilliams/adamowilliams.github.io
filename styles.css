@@ -99,9 +99,9 @@ body {
 }
 
 .profile-image {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    width: 210px;
+    height: 210px;
+    border-radius: 10%;
     margin: 0 auto 2rem;
     background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
     display: flex;
