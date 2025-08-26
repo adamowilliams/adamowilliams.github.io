@@ -13,7 +13,7 @@ body {
 
 /* Header Navigation */
 .header {
-    background: #ffffff;
+    background: #20b2aa;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -28,6 +28,18 @@ body {
     align-items: center;
 }
 
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -35,7 +47,7 @@ body {
 }
 
 .nav-links a {
-    color: #545454b0;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.2s ease;
@@ -43,7 +55,7 @@ body {
 }
 
 .nav-links a:hover {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .social-links {
@@ -97,11 +109,6 @@ body {
     font-size: 4rem;
     color: #6c757d;
     overflow: hidden;
-    transition: transform 0.2s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.02);
 }
 
 .profile-image img {
@@ -133,14 +140,12 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
-    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .profile-btn:hover {
     background: #e9ecef;
     border-color: #adb5bd;
-    transform: translateY(-1px);
 }
 
 /* Content Section */
@@ -156,9 +161,6 @@ body {
     line-height: 1.7;
     color: #495057;
     margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
 }
 
 .intro-text p {
@@ -168,31 +170,12 @@ body {
 .highlight {
     font-weight: 600;
     color: #2c3e50;
-    position: relative;
-}
-
-.highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #20b2aa;
-    transition: width 0.3s ease;
-}
-
-.highlight:hover::after {
-    width: 100%;
 }
 
 .current-role {
     margin: 2rem 0;
     padding-bottom: 2rem;
     border-bottom: 1px solid #e9ecef;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
 .current-role h2 {
@@ -223,19 +206,15 @@ body {
 .affiliations a {
     color: #20b2aa;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .affiliations a:hover {
     text-decoration: underline;
-    transform: translateX(5px);
 }
 
 .projects-section {
     margin-top: 3rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease 0.4s forwards;
 }
 
 .section-title {
@@ -252,20 +231,14 @@ body {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #e9ecef;
-    transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .project.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.project:hover {
-    transform: translateY(-5px);
-    padding-left: 1rem;
-    border-left: 3px solid #20b2aa;
 }
 
 .project:last-child {
@@ -277,12 +250,6 @@ body {
     color: #2c3e50;
     margin-bottom: 0.8rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.project h3:hover {
-    color: #20b2aa;
 }
 
 .project-description {
@@ -306,14 +273,6 @@ body {
     border-radius: 15px;
     font-size: 0.85rem;
     font-weight: 500;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.tech-tag:hover {
-    background: #1565c0;
-    color: white;
-    transform: scale(1.05);
 }
 
 .project-links {
@@ -330,21 +289,15 @@ body {
     border-radius: 6px;
     transition: all 0.2s ease;
     font-size: 0.9rem;
-    cursor: pointer;
 }
 
 .project-link:hover {
     background: #20b2aa;
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(32, 178, 170, 0.3);
 }
 
 .skills-section {
     margin-top: 3rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease 0.6s forwards;
 }
 
 .skills-grid {
@@ -357,12 +310,6 @@ body {
     background: #f8f9fa;
     padding: 1.5rem;
     border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.skill-category:hover {
-    background: #e9ecef;
-    transform: translateY(-3px);
 }
 
 .skill-category h3 {
@@ -382,17 +329,9 @@ body {
     color: #495057;
     font-size: 0.95rem;
     padding: 0.2rem 0;
-    transition: all 0.2s ease;
-    cursor: pointer;
 }
 
-.skill:hover {
-    color: #20b2aa;
-    transform: translateX(5px);
-    font-weight: 500;
-}
-
-/* Animations */
+/* Simple fade-in animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -437,10 +376,8 @@ body {
         padding: 2rem;
     }
 
-    .project:hover {
-        transform: none;
-        padding-left: 0;
-        border-left: none;
+    .project {
+        margin-bottom: 2rem;
     }
 }
 
